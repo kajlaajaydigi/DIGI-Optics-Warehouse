@@ -1,0 +1,40 @@
+Vendor Listing & New Vendor: 
+
+Route:
+
+/vendor-list
+/new-vendor
+
+Controller:
+
+VendorController
+app/Http/Controllers/VendorController.php
+
+View File:
+resources/views/vendor/new-vendor.blade.php
+resources/views/vendor/vendor-list.blade.php
+
+JS File:
+public/assets/js/vendor.js
+
+
+
+Vendor Products Listing & New vendor Products
+
+Route:
+/vendor-product-list
+/new-vendor-product
+
+Controller:
+VendorProductController
+app/Http/Controllers/VendorProductController.php
+
+View Files:
+resources/views/vendor-product/new-vendor-product.blade.php
+resources/views/vendor-product/vendor-product-list.blade.php
+
+JS File:
+public/assets/js/vendor-product.js
+
+
+(I have created some more routes to handle the Edit/Update and view functionality)

@@ -1,0 +1,135 @@
+/* Localized theme variables for the sidebar */
+#sidebar-col.frost-sidebar-col {
+  --frost-accent: #0047BE; /*#0047BE;*/
+  --frost-bg: rgba(255, 255, 255, 0.2);
+  --frost-border: rgba(255, 255, 255, 0.28);
+  --frost-shadow: 0 10px 30px rgba(17, 25, 40, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  /* position: relative; */
+  isolation: isolate; /* keep z-index stacking local */
+}
+
+/* Animated accent blobs behind the frosted card */
+#sidebar-col .frosty-anim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;                /* sits behind the frosted nav */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Individual blob nodes for clear visible motion */
+#sidebar-col .frosty-anim span {
+  position: absolute;
+  width: 22vmax;
+  height: 22vmax;
+  border-radius: 50%;
+  filter: blur(55px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  will-change: transform;
+  transform: translateZ(0);
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--frost-accent) 78%, white 0%) 0%, transparent 62%);
+  animation: blobMove 28s ease-in-out infinite;
+}
+
+/* Variants for parallax-like motion */
+#sidebar-col .frosty-anim span.b1 {
+  left: -20%;
+  top: -10%;
+  animation-duration: 4s;
+}
+#sidebar-col .frosty-anim span.b2 {
+  right: -20%;
+  top: 20%;
+  opacity: 0.45;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+#sidebar-col .frosty-anim span.b3 {
+  left: -20%;
+  bottom: -20%;
+  opacity: 0.4;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+#sidebar-col .frosty-anim span.b4 {
+  right: -20%;
+  bottom: 10%;
+  opacity: 0.35;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+/* Smooth drifting + subtle rotation + scaling */
+@keyframes blobMove {
+  0%   { transform: translate3d(0%, 0%, 0) scale(1) rotate(0deg); }
+  25%  { transform: translate3d(-8%, 6%, 0) scale(1.05) rotate(10deg); }
+  50%  { transform: translate3d(6%, -10%, 0) scale(1.1) rotate(18deg); }
+  75%  { transform: translate3d(-6%, -4%, 0) scale(1.03) rotate(8deg); }
+  100% { transform: translate3d(0%, 0%, 0) scale(1) rotate(0deg); }
+}
+
+/* Frosted "card" shell */
+#sidebarnav.sidebar-frosted {
+  background: var(--frost-bg) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  /* border: 1px solid var(--frost-border); */
+  border-right-color: color-mix(in srgb, var(--frost-accent) 30%, white 70%);
+  border-radius: 0px;
+  box-shadow: var(--frost-shadow);
+  z-index: 1; /* above blobs */
+  overflow: hidden; /* clip inner frost to rounded corners */
+}
+
+/* Brand row as frosted strip */
+#sidebarnav.sidebar-frosted .navbar-brand {
+  background: rgba(255, 255, 255, 0.22) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  backdrop-filter: blur(10px) saturate(150%);
+  border-bottom: 1px solid var(--frost-border) !important;
+}
+
+/* Frosted inner panels */
+#sidebarnav .bg-white,
+#sidebarnav .collapse-inner {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  /* -webkit-backdrop-filter: blur(8px) saturate(140%); */
+  /* backdrop-filter: blur(8px) saturate(140%); */
+  border: 1px solid var(--frost-border);
+  border-radius: 12px;
+}
+
+/* Links on glass: clean, legible, with accent active state */
+#sidebarnav .nav-link {
+  color: #1f2a44; /* readable on light frost */
+  border-radius: 8px;
+}
+
+#sidebarnav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+#sidebarnav .nav-link.active {
+  background-color: color-mix(in srgb, var(--frost-accent) 18%, transparent);
+  color: color-mix(in srgb, var(--frost-accent) 65%, #1f2a44);
+  border: 1px solid color-mix(in srgb, var(--frost-accent) 35%, white 65%);
+}
+
+/* Icons inherit text color */
+#sidebarnav .nav-link i,
+#sidebarnav .nav-link .material-symbols-outlined {
+  color: inherit;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #sidebar-col .frosty-anim span { animation: none; }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  #sidebarnav.sidebar-frosted {
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+}

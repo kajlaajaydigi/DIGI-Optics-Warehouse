@@ -1,0 +1,114 @@
+.suggestion-box {
+    width: max-content;
+    z-index: 1000;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 99999 !important;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+}
+
+.suggestions .suggestion-item {
+    cursor: pointer;
+    padding: 8px 12px;
+}
+.suggestions .suggestion-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* --- Sticker box --- */
+.sticker {
+    width: 95mm;
+    height: 12mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sticker-content {
+    width: 91mm;
+    height: 8mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+/* columns */
+.sticker-left,
+.sticker-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+.sticker-left {
+    width: 40%;
+    text-align: left;
+}
+.sticker-right {
+    width: 60%;
+    text-align: center;
+}
+.sticker .code {
+    font-size: 8px;
+    margin-top: -2px;
+}
+
+/* barcode canvas shown in exact mm; JS will set pixel size for sharpness */
+/* keep sticker-content same: 91mm x 8mm */
+.barcode-wrap {
+    width: 45mm; /* adjust according to available space within 91mm */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Make the SVG sized in mm so browser prints it exact */
+#barcodeSvg {
+    display: block;
+    width: 45mm; /* final printed width */
+    height: 8mm; /* final printed height of bars area */
+}
+.barcode-wrap .code {
+    font-size: 8px;
+    margin-top: 1px;
+}
+
+/* --- Print-only rules --- */
+@media print {
+    /* show only the sticker */
+    body * {
+        visibility: hidden !important;
+    }
+    #printThis,
+    #printThis * {
+        visibility: visible !important;
+    }
+    #printThis {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* page size EXACT 95x12mm, no margins */
+    @page {
+        size: 95mm 12mm;
+        margin: 0;
+    }
+    html,
+    body {
+        width: 95mm;
+        height: 12mm;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

@@ -1,0 +1,116 @@
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff !important;
+    }
+
+
+    .modal,
+    .modal-dialog,
+    .modal-content {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        background: white !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .modal-header,
+    .modal-footer,
+    .btn,
+    .btn-close {
+        display: none !important;
+    }
+
+
+    #printPreView {
+        padding: 12px !important;
+        border: none !important;
+    }
+
+
+    .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -0.5rem !important;
+        margin-right: -0.5rem !important;
+    }
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-6,
+    .col-md-12 {
+        float: left !important;
+        box-sizing: border-box !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .col-md-2 {
+        width: 16.666667% !important;
+    }
+    .col-md-3 {
+        width: 25% !important;
+    }
+    .col-md-4 {
+        width: 33.333333% !important;
+    }
+    .col-md-6 {
+        width: 50% !important;
+    }
+    .col-md-12 {
+        width: 100% !important;
+    }
+
+    
+    .card {
+        border: 1px solid #ccc !important;
+        border-radius: 8px !important;
+        margin-bottom: 12px !important;
+    }
+    .card-body {
+        padding: 10px !important;
+    }
+
+
+    /* .nav-tabs,
+    .nav-item,
+    .nav-link {
+        display: none !important;
+    }
+    .tab-content > .tab-pane {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        opacity: 0 !important;
+    }
+    .tab-content > .tab-pane.active {
+        display: block !important;
+        visibility: visible !important;
+        height: auto !important;
+        opacity: 1 !important;
+    } */
+
+    /* Typography */
+    .fw-bold {
+        font-weight: bold !important;
+    }
+    h6 {
+        margin: 0 0 6px 0 !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+    }
+    span {
+        font-size: 12px !important;
+    }
+
+    /* Print page margin */
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+}

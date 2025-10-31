@@ -1,0 +1,433 @@
+#totaltasks_filter label {
+    display: inline-flex !important;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.spinner-color {
+    color: #fe6c0f;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: flex !important;
+}
+
+table.general-dataTable th {
+    background-color: #0047be;
+    color: #ffffff;
+}
+
+table.padding th {
+    background-color: #0047be;
+    color: #ffffff;
+}
+
+/* Data table style Start */
+
+table.dataTable > thead > tr > th:not(.sorting_disabled),
+table.dataTable > thead > tr > td:not(.sorting_disabled) {
+    /* padding-right: 30px; */
+    color: #ffffff;
+    background-color: #0047be;
+    text-align: center !important;
+}
+/*
+table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, table.dataTable tfoot td {
+    color: #000000;
+    background-color: #EBEBEB;
+    padding: 10px 5px;
+} */
+
+table.dataTable tbody td {
+    color: #000000;
+    text-align: center !important;
+}
+/*
+table.dataTable {
+    clear: both;
+    font-size: 12px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0px;
+    color: #fff !important;
+} */
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #3cbbb4;
+    border-color: #3cbbb4;
+}
+
+.page-item.active:hover .page-link:hover {
+    color: #fff;
+    background-color: #3cbbb4;
+    border: 0px solid transparent;
+}
+
+.customoddcolor .odd {
+    background-color: cornsilk;
+}
+
+.customoddcolor .even {
+    background-color: peachpuff;
+}
+
+.customoddcolor td:nth-child(-n + 3) {
+    font-weight: 700;
+}
+
+/* Data table style End */
+
+/* Cards Counter CSS */
+
+.card-custom {
+    box-shadow: 2px 2px 10px #dadada;
+    margin: 5px;
+    padding: 20px 20px 60px 20px;
+    background-color: #fbfbfb;
+    border-radius: 16px;
+    transition: 0.3s linear all;
+}
+
+.card-counter {
+    box-shadow: 2px 2px 10px #dadada;
+    margin: 5px;
+    padding: 20px 20px;
+    background-color: #fff;
+    height: 130px;
+    border-radius: 16px;
+    transition: 0.3s linear all;
+    color: #000000;
+}
+
+.card-counter:hover {
+    box-shadow: 4px 4px 20px #dadada;
+    transition: 0.3s linear all;
+}
+
+.card-counter.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-counter.secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.card-counter.danger {
+    background-color: #ef5350;
+    color: #fff;
+}
+
+.card-counter.success {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.card-counter.info {
+    background-color: #26c6da;
+    color: #fff;
+}
+
+.card-counter.warning {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.card-counter i {
+    font-size: 2em;
+    opacity: 0.2;
+}
+
+.card-counter .count-numbers {
+    position: absolute;
+    margin-left: 5px;
+    /* margin-left: 10px; */
+    font-size: 40px;
+}
+
+.card-counter .count-name {
+    position: absolute;
+    margin-top: 60px;
+    /* margin-left: 10px; */
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.bg-grey-1 {
+    background: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 100% 120%" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="429" height="273" rx="20" fill="%23FBFBFB"/><mask id="mask0_1_2209" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="429" height="273"><rect width="429" height="273" rx="20" fill="%23FABC07"/></mask><g mask="url(%23mask0_1_2209)"><path d="M35.5 196.5C7.1 204.9 -42 176.333 -63 161V311.5H443C463.167 296.833 494.3 253.3 457.5 196.5C411.5 125.5 338.5 125.5 267.5 161C196.5 196.5 188 175.5 138 161C88 146.5 71 186 35.5 196.5Z" fill="%23EBEBEB"/></g></svg>');
+}
+
+.bg-blue-1 {
+    background-color: #0047be;
+    color: #ffffff;
+}
+
+.bg-orange-1 {
+    background-color: #ff6200;
+    color: #ffffff;
+}
+
+.bg-gray-1 {
+    background-color: #abb8c3;
+    color: #ffffff;
+}
+
+.bg-green-1 {
+    background-color: #198754;
+    color: #ffffff;
+}
+
+#useraccessname {
+    margin: 0px;
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-select,
+.form-control {
+    font-size: 0.75rem;
+}
+
+#alljobcards_wrapper td,
+#jobcardhistory_wrapper td,
+#reportone_wrapper td,
+#reporttwo_wrapper td,
+#expensereport_wrapper td,
+#mastertasklist_wrapper td,
+#usertasklist_wrapper td,
+#paymentexpensereport_wrapper td,
+#taskreport_wrapper td {
+    /* padding: 5px; */
+}
+
+/* #alljobcards_wrapper th, #jobcardhistory_wrapper th, #reportone_wrapper th, #paymentexpensereport_wrapper th {
+  padding: 5px !important;
+  text-align: left;
+} */
+
+#taskreport_wrapper th:first-child {
+    /* padding: 5px !important; */
+    text-align: left;
+}
+
+#taskreport_wrapper th {
+    /* padding: 5px !important; */
+    text-align: right;
+}
+
+#reporttwo_wrapper th,
+#reporttwo_wrapper td,
+#statusjobcards_wrapper th,
+#statusjobcards_wrapper td,
+#jobcardhistorytable_wrapper th,
+#jobcardhistorytable_wrapper td,
+#todaydeliveryreport_wrapper td,
+#todaydeliveryreport_wrapper th {
+    /* padding: 5px !important; */
+    text-align: center;
+}
+
+#mastertasklist_wrapper thead th:last-child,
+#usertasklist_wrapper thead th:last-child {
+    text-align: center;
+}
+
+#paymentexpensereport thead th.dt-type-numeric {
+    text-align: left !important;
+}
+
+.dt-paging-button {
+    border: 1px solid #eee;
+}
+
+.dt-paging-button:hover {
+    border: 1px solid #000;
+}
+
+#loginlogo {
+    width: 250px !important;
+}
+
+.form-label,
+.form-select,
+.form-control {
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000000 !important;
+}
+
+/* #alljobcards_wrapper th, #alljobcards_wrapper td {
+  max-width: 250px;
+} */
+
+/* #alljobcards_wrapper th.wrap-column, #alljobcards_wrapper td.wrap-column {
+    min-width: 200px;
+    text-wrap: wrap;
+  } */
+
+.required {
+    color: #ff0000;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888 !important;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+}
+
+.sidebar-dark .nav-item .nav-link::after {
+    /* color: rgb(187 187 187 / 62%) !important; */
+    color: #ffffff !important;
+}
+
+.sidebar .nav-item .collapse {
+    position: relative !important;
+    left: 0 !important;
+    z-index: 1;
+    top: 0 !important;
+}
+
+.border-orange {
+    border: 2px solid #fe6c0f;
+}
+
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+.dataTables_scrollHeadInner table {
+    width: 100% !important;
+}
+
+#sidebar-col {
+    /* display: flex; */
+    position: sticky;
+    overflow: hidden;
+    /* height: 100vh;
+    background: white;
+    width: 60%;
+    z-index: 1; */
+}
+
+.nav-link-text {
+    font-size: 14px;
+}
+
+.nav-item .collapseReports div {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    #sidebar-col {
+        display: flex;
+        position: fixed;
+        /* overflow: scroll; */
+        height: 100vh;
+        background: white;
+        width: 60%;
+        z-index: 1;
+    }
+
+    a.nav-link {
+        display: inline-flex;
+    }
+
+    ul#accordionSidebar {
+        width: 90%;
+    }
+}
+
+/* Add throught tushar */
+.five-col-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.five-col-grid .col-fixed {
+    width: calc(20% - 0.8rem);
+}
+
+@media (max-width: 768px) {
+    .five-col-grid .col-fixed {
+        width: calc(50% - 0.8rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .five-col-grid .col-fixed {
+        width: calc(50% - 0.8rem);
+    }
+}
+
+@media (max-width: 360px) {
+    .five-col-grid .col-fixed {
+        width: 100%;
+    }
+}

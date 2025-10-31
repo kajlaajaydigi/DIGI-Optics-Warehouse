@@ -1,0 +1,139 @@
+@media print {
+    .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .col-md-3 {
+        width: 25% !important;
+        float: left !important;
+        box-sizing: border-box;
+        padding: 5px !important;
+    }
+
+    .modal,
+    .modal-dialog,
+    .modal-content {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    .modal-header,
+    .modal-footer,
+    .btn,
+    .btn-close {
+        display: none !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #printThis {
+        padding: 10px;
+        border: none !important;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal,
+    .modal-dialog,
+    .modal-content {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    .modal-header,
+    .modal-footer,
+    .btn,
+    .btn-close {
+        display: none !important;
+    }
+
+    #printCustJCInfo,
+    #printJCInfomation {
+        padding: 10px !important;
+        border: none !important;
+    }
+
+    .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-left: -0.5rem !important;
+        margin-right: -0.5rem !important;
+    }
+
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-6,
+    .col-md-12 {
+        float: left !important;
+        box-sizing: border-box !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .col-md-2 {
+        width: 16.666667% !important;
+    }
+    .col-md-3 {
+        width: 25% !important;
+    }
+    .col-md-4 {
+        width: 33.333333% !important;
+    }
+    .col-md-6 {
+        width: 50% !important;
+    }
+    .col-md-12 {
+        width: 100% !important;
+    }
+
+    .five-col-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px;
+    }
+
+    .five-col-grid .col-fixed {
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+
+    /* Only print the active tab content */
+    .tab-content > .tab-pane {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        opacity: 0 !important;
+    }
+
+    .tab-content > .tab-pane.active {
+        display: block !important;
+        visibility: visible !important;
+        height: auto !important;
+        opacity: 1 !important;
+    }
+
+    .fw-bold {
+        font-weight: bold !important;
+    }
+
+    @page {
+        size: auto;
+        margin: 10mm;
+    }
+}
